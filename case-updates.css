@@ -1,0 +1,35 @@
+/* Each repaired pose is an individual asset, so fingers cannot cross a sprite-cell boundary. */
+.character.p2{background-image:url('assets/mascot-point.webp');background-size:contain;background-position:center;background-repeat:no-repeat}
+.character.p3{background-image:url('assets/mascot-note.webp');background-size:contain;background-position:center;background-repeat:no-repeat}
+.showcase-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:17px}
+.showcase-heading small{font-size:9px;letter-spacing:.1em}.showcase-heading h3{margin:7px 0 0}.showcase-heading>span{font-size:10px;color:var(--muted);white-space:nowrap}
+.seasonal-block{margin-top:35px}.seasonal-intro{max-width:680px;color:#687d60}
+.seasonal-scene{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;isolation:isolate;background:radial-gradient(ellipse at 50% 82%,#e5ebd8 0%,#f1f3e7 47%,#f8f8ee 80%);border:1px solid #d2dcc4;padding:25px 14px 20px;margin-top:20px;border-radius:6px;perspective:1200px;overflow-x:auto;scroll-snap-type:x proximity}
+.season-figure{margin:0;min-width:0;text-align:center;scroll-snap-align:center}
+.ip-object{height:213px;position:relative;transform-style:preserve-3d;display:flex;align-items:end;justify-content:center;padding-bottom:12px}
+.ip-object>img{height:100%;width:100%;object-fit:contain;object-position:center bottom;position:relative;z-index:2;filter:drop-shadow(5px 11px 5px #384b3526);transform:translateZ(20px);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .35s}
+.ip-platform{position:absolute;left:6%;right:6%;bottom:3px;height:23px;border-radius:50%;background:#d8e1c9;border:1px solid #c2d0b1;box-shadow:0 7px 0 #c7d4b8,0 12px 13px #687d5c22;transform:rotateX(23deg)}
+.season-spring .ip-platform{background:#e5e5bb}.season-summer .ip-platform{background:#d4e6e9}.season-autumn .ip-platform{background:#eadbc4}.season-winter .ip-platform{background:#e6d9d3}.season-holiday .ip-platform{background:#d5e1cd}
+.season-figure:hover img{transform:translateY(-10px) rotateY(-7deg) rotateZ(-2deg) translateZ(25px);filter:drop-shadow(8px 18px 7px #384b352b)}
+.season-figure:nth-child(even):hover img{transform:translateY(-10px) rotateY(7deg) rotateZ(2deg) translateZ(25px)}
+.season-figure figcaption{margin-top:18px}.season-figure figcaption b{display:block;font:19px 'Songti SC',serif}.season-figure figcaption span{display:block;font-size:9px;color:var(--muted);margin-top:6px}
+.seasonal-hint{display:none}
+.runba-campaign{margin-top:35px}.campaign-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.campaign-stages article{border:1px solid #c8d3ba;padding:16px 13px 17px;background:#edf1e4;position:relative}
+.campaign-stages article:nth-child(2){background:#e8eeea}.campaign-stages article:nth-child(3){background:#f0ecdf}
+.phase-heading{display:flex;align-items:center;gap:12px;margin-bottom:16px}.phase-heading b{font:11px monospace;color:#81936f}.phase-heading h4{font-size:15px;font-weight:500}
+.campaign-stages button{width:100%;padding:5px;background:#fffdf5;box-shadow:1px 4px 7px #58704d17;display:block}
+.campaign-stages img{width:100%;height:230px;object-fit:contain}.campaign-stages p{font-size:11px;margin-top:18px;color:#65795f;line-height:1.9}
+.publication-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}.publication-grid figure{margin:0;min-width:0}.publication-grid button{display:block;width:100%;padding:6px;background:#f1f4e9;border:1px solid #c8d3bd}.publication-grid img{width:100%;height:auto}.publication-grid figcaption{font-size:10px;color:var(--muted);margin-top:8px}
+.runba-onsite{margin-top:34px}.runba-onsite>button{display:block;width:100%;padding:7px;background:#fffdf4;box-shadow:2px 5px 9px #4b65451c;border:1px solid #c9d2bd;transform:rotate(-.45deg);margin-top:20px}.runba-onsite>button img{width:100%;height:auto}.onsite-caption{margin-top:16px!important;font-size:11px!important;color:var(--muted)}
+@media(max-width:680px){.showcase-heading{gap:10px;align-items:start}.showcase-heading>span{font-size:8px;max-width:70px;text-align:right;white-space:normal}.showcase-heading small{font-size:8px}.showcase-heading h3{font-size:17px;line-height:1.6}.seasonal-scene{grid-template-columns:repeat(5,128px);gap:12px;padding:20px 12px 22px;overscroll-behavior-x:contain;scrollbar-width:thin}.ip-object{height:190px}.season-figure figcaption b{font-size:18px}.season-figure figcaption span{font-size:9px}.seasonal-hint{display:block;font-size:9px!important;color:var(--muted);margin-top:9px}.campaign-stages{grid-template-columns:1fr;gap:18px}.campaign-stages article{display:grid;grid-template-columns:110px 1fr;gap:12px 16px;padding:16px}.phase-heading{grid-column:1/-1;margin:0 0 4px}.campaign-stages img{height:155px}.campaign-stages p{font-size:11px;margin-top:0;align-self:center}.publication-grid{grid-template-columns:1fr;gap:22px}.runba-onsite>button{padding:4px}.onsite-caption{font-size:10px!important}.seasonal-intro{font-size:12px!important}}
+@media(max-width:680px){.folder{overflow:clip}}
+button.character{pointer-events:auto;cursor:pointer;padding:0;border:0;transition:filter .2s;z-index:8}
+button.character:hover{filter:drop-shadow(0 5px 6px #6d8a6a33)}
+button.character:focus-visible{outline:2px dashed #91aa7f;outline-offset:4px;border-radius:12px}
+.intro button.character{animation:hello-action 5.5s ease-in-out infinite}
+@keyframes hello-action{0%,55%,100%{transform:translateY(0) rotate(0)}65%{transform:translateY(-9px) rotate(-8deg)}75%{transform:translateY(-5px) rotate(7deg)}85%{transform:translateY(-8px) rotate(-5deg)}93%{transform:translateY(-2px) rotate(3deg)}}
+.intro button.character-reacting,button.guide.character-reacting{animation:character-pop .65s cubic-bezier(.2,.9,.2,1) both!important}
+@keyframes character-pop{0%{transform:scale(.82) translateY(5px) rotate(-7deg)}45%{transform:scale(1.12) translateY(-12px) rotate(5deg)}75%{transform:scale(.98) translateY(-3px) rotate(-2deg)}100%{transform:scale(1.03) translateY(-5px)}}
+.channel-primary{color:#436b4f!important;font-weight:600;border-bottom:1px solid #c4d2b7;padding-bottom:8px;margin-bottom:8px}
+@media(prefers-reduced-motion:reduce){.ip-object>img{transition:none!important}.season-figure:hover img{transform:none!important}.intro button.character,button.character-reacting,button.guide.character-reacting{animation:none!important}}
